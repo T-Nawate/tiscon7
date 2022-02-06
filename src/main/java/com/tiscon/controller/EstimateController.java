@@ -157,9 +157,15 @@ public class EstimateController {
     String complete(@Validated(Customer.class)UserOrderForm userOrderForm, BindingResult result, Model model) {
         if (result.hasErrors()) {
 
+            // 料金の計算を行う。
+            UserOrderDto dto = new UserOrderDto();
+            BeanUtils.copyProperties(userOrderForm, dto);
+            Integer price = estimateService.getPrice(dto);
+
             model.addAttribute("prefectures", estimateDAO.getAllPrefectures());
             model.addAttribute("userOrderForm", userOrderForm);
-            return "confirm";
+            model.addAttribute("price", price);
+            return "result";
         }
 
         UserOrderDto dto = new UserOrderDto();
