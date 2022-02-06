@@ -94,28 +94,28 @@
 
              </fieldset>
              <fieldset>
-                 <div class="sub-title">お荷物情報</div>
+                 <div class="sub-title">お荷物情報　※〜段ボール８０個：２トントラック（3万円）　〜段ボール２００個：４トントラック（5万円）</div>
                  <div class="form-group">
-                     <label for="box">段ボールの個数</label>
+                     <label for="box">段ボールの個数　※目安●1R：10～15枚　●1DK：20～30枚　●2DK：40～50枚　●3DK：50～80枚</label>
                      <input type="text" id="box" name="box" th:field="*{box}" class="form-control" value="10"/>
                  </div>
                  <div class="form-group">
-                     <label for="bed">ベッドの個数</label>
+                     <label for="bed">ベッドの個数 ※１つにつき段ボール２０個分です。</label>
                      <input type="text" id="bed" name="bed" th:field="*{bed}" class="form-control" value="3"/>
                  </div>
                  <div class="form-group">
-                     <label for="bicycle">自転車の個数</label>
+                     <label for="bicycle">自転車の個数　※１つにつき段ボール１５個分です。</label>
                      <input type="text" id="bicycle" name="bicycle" th:field="*{bicycle}" class="form-control"
                             value="1"/>
                  </div>
                  <div class="form-group">
-                     <label for="washingMachine">洗濯機の個数</label>
+                     <label for="washingMachine">洗濯機の個数　※１つにつき段ボール１０個分です。</label>
                      <input type="text" id="washingMachine" name="washingMachine" th:field="*{washingMachine}"
                             class="form-control"
                             value="1"/>
                  </div>
                  <div class="form-group">
-                     <label for="washingMachineInstallation">洗濯機の設置工事申し込み</label>
+                     <label for="washingMachineInstallation">洗濯機の設置工事申し込み　※プラス3000円です。</label>
                      <select id="washingMachineInstallation" name="washingMachineInstallation" class="form-control"
                              th:field="*{washingMachineInstallation}">
                          <option th:value="false" th:text="なし">なし</option>
