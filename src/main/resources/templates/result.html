@@ -21,8 +21,18 @@
     <div class="col-sm-12">
       <div class="text-center">
         <div class="primary-text"><span th:text="${price}"></span>円</div>
+      </div>
+      <div class="text-left">
+        <div class="sub-title">注１）概算方法について　(距離[km] × 100[円] ＋ トラック輸送費[円]) × 季節係数 ＋ オプション代金[円]</div>
+        <div class="sub-title">注２）季節係数について　３月・4月：1.5　9月：1.2　その他月と未定：1　となります。</div>
+        <div class="sub-title">注３）離島などではお見積もり結果と実際の金額に差が生じることがあります。</div>
+        </div>
+        <div class="text-center">
         <button type="submit" name="complete" class="btn btn-primary">詳細見積もり依頼へ</button>
       </div>
+      <ul th:if="${#fields.hasErrors('all')}">
+        <li th:each="err : ${#fields.errors('all')}" th:text="${err}"></li>
+      </ul>
       <div class="sub-title">お客様情報</div>
         <table class="table table-bordered">
         <col span="1" style="background-color: #FFFFFF;">
