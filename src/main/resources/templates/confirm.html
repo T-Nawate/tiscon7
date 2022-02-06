@@ -87,6 +87,28 @@
         </tbody>
       </table>
     </div>
+
+
+    <div class="col-sm-12">
+      <div class="sub-title">引っ越し月</div>
+      <table class="table table-bordered">
+        <col span="1" style="background-color: #FFFFFF;">
+        <col span="2" style="background-color: #FFFFFF;">
+        <tbody>
+        <tr>
+          <th style="width: 40%">引っ越し月</th>
+          <td>
+            <span th:text="*{movingMonth}"></span>月
+          </td>
+          <input type="hidden" name="movingMonth" id="movingMonth" th:value="*{movingMonth}"/>
+        </tr>
+
+        </tbody>
+      </table>
+    </div>
+
+
+
     <div class="col-sm-12">
       <div class="sub-title">お荷物情報</div>
         <table class="table table-bordered">

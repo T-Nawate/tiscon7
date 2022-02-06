@@ -1,5 +1,9 @@
 package com.tiscon.dto;
 
+import com.tiscon.validator.Numeric;
+
+import javax.validation.constraints.NotBlank;
+
 public class UserOrderDto {
 
     private String customerName;
@@ -15,6 +19,8 @@ public class UserOrderDto {
     private String newPrefectureId;
 
     private String newAddress;
+
+    private String movingMonth;
 
     private String box;
 
@@ -80,6 +86,14 @@ public class UserOrderDto {
 
     public void setNewAddress(String newAddress) {
         this.newAddress = newAddress;
+    }
+
+    public String getMovingMonth() {
+        return movingMonth;
+    }
+
+    public void setMovingMonth(String movingMonth) {
+        this.movingMonth = movingMonth;
     }
 
     public int getBox() {
