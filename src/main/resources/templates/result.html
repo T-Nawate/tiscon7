@@ -25,10 +25,11 @@
       <div class="text-left">
         <div class="sub-title">注１）概算方法について　(距離[km] × 100[円] ＋ トラック輸送費[円]) × 季節係数 ＋ オプション代金[円]</div>
         <div class="sub-title">注２）季節係数について　３月・4月：1.5　9月：1.2　その他月と未定：1　となります。</div>
-        <div class="sub-title">注３）離島などではお見積もり結果と実際の金額に差が生じることがあります。</div>
+        <div class="sub-title">注３）概算のため都道府県内・都道府県境・離島を含む移動の場合には、お見積もり結果と実際の金額に差が生じることがあります。</div>
         </div>
         <div class="text-center">
         <button type="submit" name="complete" class="btn btn-primary">詳細見積もり依頼へ</button>
+          <div style="font-weight:bold;">お電話にて正確な見積もり結果をお伝えいたします。</div>
       </div>
       <ul th:if="${#fields.hasErrors('all')}">
         <li th:each="err : ${#fields.errors('all')}" th:text="${err}"></li>
