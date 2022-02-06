@@ -30,18 +30,18 @@
         <tbody>
         <tr>
           <th style="width: 40%">氏名</th>
-          <td><span th:text="*{customerName}"></span></td>
-          <input type="hidden" name="customerName" id="customerName" th:value="*{customerName}"/>
+
+          <td><input type="text" name="customerName" id="customerName" th:value="*{customerName}" class="form-control"/></td>
         </tr>
         <tr>
           <th>連絡先TEL</th>
-          <td><span th:text="*{tel}"></span></td>
-          <input type="hidden" name="tel" id="tel" th:value="*{tel}"/>
+
+          <td><input type="text" name="tel" id="tel" th:value="*{tel}" class="form-control"/></td>
         </tr>
         <tr>
           <th>連絡先メールアドレス</th>
-          <td><span th:text="*{email}"></span></td>
-          <input type="hidden" name="email" id="email" th:value="*{email}"/>
+
+          <td><input type="text" name="email" id="email" th:value="*{email}" class="form-control"/></td>
         </tr>
         </tbody>
         </table>

@@ -1,5 +1,6 @@
 package com.tiscon.form;
 
+import com.tiscon.validator.Customer;
 import com.tiscon.validator.Numeric;
 
 import javax.validation.constraints.Email;
@@ -13,15 +14,15 @@ import javax.validation.constraints.NotNull;
  */
 public class UserOrderForm {
 
-    @NotBlank
+    @NotBlank(groups = Customer.class)
     private String customerName;
 
-    @NotBlank
-    @Numeric
+    @NotBlank(groups = Customer.class)
+    @Numeric(groups = Customer.class)
     private String tel;
 
-    @Email
-    @NotBlank
+    @Email(groups = Customer.class)
+    @NotBlank(groups = Customer.class)
     private String email;
 
     @NotBlank
